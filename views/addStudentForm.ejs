@@ -1,0 +1,16 @@
+<button class="btn btn-danger" id="closeStudentFrom">close Form</button>
+<h2 class="mt-2" style="text-align: center;">Add Student</h2>
+<form action="/student/addStudent" class="addForm" method="post" id="studentForm">
+    <input type="email" name="email" id="email" placeholder="Enter Email" required> <br>
+    <input type="text" name="college" id="college" placeholder="Enter college Name" required> <br>
+    <input type="text" name="batch" id="batch" placeholder="Enter Batch" required> <br>
+    <input type="number" name="DSA_Score" id="DSA_Score" placeholder="Enter DSA Score" required> <br>
+    <input type="number" name="webD_Score" id="webD_Score" placeholder="Enter Web-D Score" required> <br>
+    <input type="number" name="react_Score" id="react_Score" placeholder="Enter React Score" required> <br>
+    <select name="status" id="status" required>
+        <option value="N/A" disabled selected>Placed or Not</option>
+        <option value="Placed">Placed</option>
+        <option value="Not Placed">Not Placed</option>
+    </select><br>
+    <button type="submit" class="formSubmitBtn btn btn-primary" style="margin-top: 30px;" id="addStudent">Add Student</button>
+</form>

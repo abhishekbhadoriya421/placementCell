@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Email</th>
+        <th scope="col">Batch</th>
+        <th scope="col">DSA Score</th>
+        <th scope="col">WebD Score</th>
+        <th scope="col">React Score</th>
+        <th scope="col">college Name</th>
+        <th scope="col">status</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider" id="studentListTbody">
+      <% students.forEach((std) => { %>
+        <tr id=<%= std.id %>>
+          <th scope="row"><%= std.email %></th>
+          <td><%= std.batch  %></td>
+          <td><%= std.DSA_Score  %></td>
+          <td><%= std.webD_Score  %></td>
+          <td><%= std.react_Score %></td>
+          <td><%= std.college %></td>
+          <td><%= std.status %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>

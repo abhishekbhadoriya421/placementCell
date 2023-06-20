@@ -1,0 +1,27 @@
+.studentAndInterviewFormContainer{
+    display: none;
+    width:50%;
+    min-width: 400px;
+    border-radius: 12px;
+    margin: auto;
+    padding: 50px 10px;
+    box-shadow: 0px 0px 5px -1px black;
+}
+
+.studentAndInterviewFormContainer .addStudentForm{
+    display: none;
+}
+.studentAndInterviewFormContainer .addInterviewForm{
+    display: none;
+}
+.studentAndInterviewFormContainer .addForm{
+    width: 50%;
+    min-width: 300px;
+    margin: auto;
+}
+.studentAndInterviewFormContainer .addForm input{
+    width: 100%;
+    margin: 10px 0px;
+    border: 0px;
+    border-bottom: 2px solid rgb(159, 159, 159);
+}

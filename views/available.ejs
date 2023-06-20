@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/available.css">
+<div class="availableInterviewContainer">
+    <table class="table" >
+        <thead>
+        <tr>
+            <th scope="col">Company Name</th>
+            <% if(locals.user){%>  
+            <th scope="col">Add Candidate</th>
+            <% } %>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <% interview.forEach(Intv => { %>
+                <tr >
+                    <th scope="row"><%= Intv.companyName  %></th>
+                    <% if(locals.user){%>  
+                    <td>
+                        <form action="/Interview/allotedInterview" method="post">
+                            <input type="text" value=<%= Intv.id %> hidden name="interviewId">
+                            <input type="email" required name="candidateEmail">  
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </form>
+                    </td>
+                    <% } %>
+                    <td><%= Intv.date.toLocaleDateString()  %></td>
+                </tr>
+
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+  

@@ -1,0 +1,55 @@
+<style>
+  .result{
+    border: 0px;
+
+  }
+</style>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Company Name</th>
+        <th scope="col">candidate Name</th>
+        <th scope="col">college Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Result</th>
+        <% if(locals.user){%>  
+        <th scope="col">Update</th>
+        <% } %>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <% for (const i of interviewList) { %>
+        <tr>
+          <th scope="row"><%= i.companyName %></th>
+          <td><%= i.candidateEmail %></td>
+          <td><%= i.college %></td>
+          <td><%= i.interviewDate.toLocaleDateString() %></td>
+          <td>
+            <select class="result" interviewId=<%=i.id%>>
+              <option value="OnHold"><%= i.result %></option> 
+              <option value="Pass">Pass</option> 
+              <option value="Fail">Fail</option> 
+              <option value="DidNotAttempt">DidNotAttempt</option> 
+          </select>
+          </td>
+          <% if(locals.user){%>  
+          <td><a href="" class="updateBtn"><button class="btn btn-success">Update</button></a></td>
+          <% } %>
+        </tr> 
+      <%} %>
+    </tbody>
+  </table>
+        
+  <script>
+    // const result = document.querySelectorAll('.result');
+    const updateBtn = document.querySelectorAll('.updateBtn');
+    updateBtn.forEach((ele)=>{
+      ele.addEventListener('click',(e)=>{
+        const interviewId = e.target.parentElement.parentElement.parentElement.querySelector('.result').getAttribute('interviewId');
+        const value = e.target.parentElement.parentElement.parentElement.querySelector('.result').value;
+        ele.setAttribute('href',`/Interview/update?interviewId=${interviewId}&&result=${value}`);
+      });
+    });
+  </script>
+  
+  

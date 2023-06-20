@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sessionFrom{
+    min-width: 400px;
+    width: 60%;
+    margin: 0px auto;
+}
