@@ -6,7 +6,7 @@
 * Add Student (if Logged In)
 * Add Interview (if Logged In)
 * Allot Interviews to Students (if Logged In)
-* Download Student Details of All the Students who have been allotted the interview in CSV Formate
+* Download Student Details of All the Students who have been allotted the interview in CSV Format
 * Update Student Result
 
   # Used Tools
